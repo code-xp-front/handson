@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Teste com map em ES6</title>
+</head>
+<body>
+	<script>
+		const prop = 'idade';
+		const familiaMoraesMendes = [
+			{nome : "Eduardo Costa", idade : 35},
+			{nome : "Thais Aparecida", idade : 38},
+			{nome : "Lucas Henrique", idade : 4},
+			{nome : "Rafael Luiz", idade : 0.5}
+		];
+
+		const familiaCosta = [
+			{nome : "Eduardo Costa", idade : 35},
+			{nome : "Edvan Costa", idade : 48},
+			{nome : "Elisete", idade : 48},
+			{nome : "Elisabete", idade : 57},
+			{nome : "Pedro Costa", idade : 79},
+			{nome : "Ozélia Costa", idade : 70}
+		];
+		
+		const porNome = (object, teste) => object.[prop];
+		const todosOsNomes = (lista) => lista.map(porNome);
+
+		const nomes = todosOsNomes(familiaMoraesMendes);
+		console.log(nomes);
+		// nomes.map(n => console.log(nomes));
+
+if( ((idade > 12) && (idade <=18)) && (ingressoMatine == true) ){
+	console.log('Bem vindo à festa Matinê Juvenil!!')
+}	</script>
+</body>
+</html>

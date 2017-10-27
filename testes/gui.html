@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		/*ul li[data-eduardo="a"]{
+			background-color: red;
+		}
+
+		ul li[data-eduardo="b"]{
+			background-color: yellow;
+		}
+
+		ul li[data-eduardo="c"]{
+			background-color: blue;
+		}*/
+		#load{
+			width: 100px;
+			height: 100px;
+			background-color: transparent;
+			border-radius: 50%;
+			border: 50px solid #000000;
+			border-left-color: transparent;
+			/*animation: anim 1s linear infinite;*/ 
+		}
+
+#load::after {
+	content: 'eita maluco'
+} 
+
+
+#load::before {
+	content: 'eita malucooooooooo'
+} 
+		@keyframes anim{
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+<!-- <ul>
+	<li data-eduardo= "a">AAAAA</li>
+	<li data-eduardo= "b">AAAA</li>
+	<li data-eduardo= "c">AAAA</li>
+</ul> -->
+<div id="load"></div>
+
+</body>
+</html>

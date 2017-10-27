@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>box</title>
+	<style>
+	/*FLOAT - left - right*/
+		*{margin: 0; padding: 0}
+
+		#um {
+			width: 660px;
+			padding: 10px;
+			border: 5px solid black;
+			position: relative;
+			margin-top: 10px;
+			height: 400px;
+		}
+	
+		#dois {
+			width: 200px;
+			height: 150px;
+			background-color: green;
+			margin: 10px;
+			float: left;
+		}
+
+		#tres {
+			width: 200px;
+			height: 150px;
+			background-color: purple;
+			
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+		}
+
+		#quatro {
+			width: 200px;
+			height: 150px;
+			background-color: blue;
+			
+			position: absolute;
+			right: 20px;
+			bottom: 0;
+
+			z-index: 1;
+		}
+
+
+		.limpar-float{clear: both;}
+	</style>
+</head>
+<body>
+		<div id="um">
+			<div id="dois"></div> <!-- div-dois -->
+			<div id="tres"></div> <!-- div-três -->
+			
+			<div id="quatro"></div> <!-- div-quatro -->
+
+			<div class="limpar-float"></div>
+		</div> <!-- div-um -->
+
+</body>
+</html>

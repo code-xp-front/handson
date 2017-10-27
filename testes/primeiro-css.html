@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Primeiro exemplo com CSS</title>
+	<link rel="stylesheet" href="caminho_do_arquivo">
+	<style>
+		* {
+			margin:0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		div { border: 1px solid black; }
+		.container {
+			padding: 5px;
+			content: "";
+			width: 100%;
+			display: table;
+		}
+
+		.a { float: left; width: 30%;}
+		.b { float: left; width: 70%; max-width: 500px;}
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="a">aaa</div>
+		<div class="b">bbb</div>
+	</div>
+
+	<div>
+		<iframe src="https://g1.globo.com/rio-de-janeiro/noticia/nuzman-renuncia-a-presidencia-do-cob.ghtml" name="Criar" width="300" height="300" frameborder="0" scrolling="auto"></iframe>
+	</div>
+
+	<!-- <div class="pessoa man xpto">Eduardo</div>
+	<div class="pessoa girl xpto">Thaís</div>
+	<div class="pessoa girl xpto">Lucas</div>
+	<div class="pessoa girl xpto">Rafael</div>
+	<div class="pessoa girl xpto">Elisabete</div>
+	<div class="pessoa girl xpto">José</div> -->
+</body>
+</html>

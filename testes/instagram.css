@@ -1,0 +1,476 @@
+body{
+		margin: 100px;
+		z-index: 0;
+ background: radial-gradient(rgb(255, 255, 255), rgb(204, 186, 161), rgb(63, 37, 2));
+	}
+	*{
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	.camera-body{
+		width: 400px;
+		height: 400px;
+		border-radius: 70px;
+		background: radial-gradient(#f9f9f8,#f7f5f1, #f1ece6, #ebe5da, #dcd0c0, #B9A288, #72594D, #3F2E29);
+		background: -webkit-radial-gradient(#f9f9f8,#f7f5f1, #f1ece6, #ebe5da, #dcd0c0, #B9A288, #72594D, #3F2E29);
+		overflow: hidden;
+		margin: 0 auto;
+		box-shadow: -6px -4px 34px #3B2F28 inset;
+	}
+	.camera-top{
+		width: 100%;
+		height: 130px;
+		background: radial-gradient(rgba(166, 122, 93, 0.7), rgba(141, 93, 72, 0.7), rgba(94, 52, 38, 0.7), rgba(49, 34, 30, 0.8)), url(http://www.caseycallis.com/images/leather-brown.png);
+		background: -webkit-radial-gradient(rgba(166, 122, 93, 0.7), rgba(141, 93, 72, 0.7), rgba(94, 52, 38, 0.7), rgba(49, 34, 30, 0.8)), url(http://www.caseycallis.com/images/leather-brown.png);
+		margin: 0 auto;
+		box-shadow: 0px -7px 15px rgba(60, 29, 22, 0.9) inset;
+	}
+	.camera-top:before{
+		content: "";
+		position: absolute;
+		width: 150px;
+		height: 60px;
+		border-radius: 50%;
+		background: radial-gradient(#FCBF99, #ae866d);
+		background: -webkit-radial-gradient(#FCBF99, #ae866d);
+		background: -moz-radial-gradient(#FCBF99, #ae866d);
+		background: -o-radial-gradient(#FCBF99, #ae866d);
+		filter: blur(20px);
+		-webkit-filter: blur(20px);
+		margin-left: 131px;
+		margin-top: 19px;
+		opacity: 0.75;
+	}
+	.lens{
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+		background: -webkit-linear-gradient(#f0efef, #eeeaea, #d7d1cf, #cbc3be, #b5a9a8);
+		background: linear-gradient(#f0efef, #eeeaea, #d7d1cf, #cbc3be, #b5a9a8);
+		border-radius: 50%;
+		position: absolute;
+		margin-left: 100px;
+		margin-top: 100px;
+		box-shadow: 0px 11px 7px #726158;
+		z-index: 0;
+	}
+	.lens:before{
+		content: "";
+		width: 175px;
+		height: 175px;
+		margin: 0 auto;
+		background: #040609;
+		border-radius: 50%;
+		position: absolute;
+		margin-left: 13px;
+		margin-top: 13px;
+		box-shadow: 0px 5px 7px #ece9e7;
+	}
+	.lens:after{
+		content:"";
+		position: absolute;
+		background:transparent;
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+		box-shadow: 0px 2px 6px #877f79 inset;
+	}
+	.blue-highlight-top{
+		position: absolute;
+		z-index: 9;
+		background: radial-gradient(top center, #59C2E4, #3F7ECA, #0A2B68);
+		background: -webkit-radial-gradient(top center, #59C2E4, #3F7ECA, #0A2B68);
+		width: 101px;
+		height: 105px;
+		border-radius: 50%;
+		margin-left: 48px;
+		margin-top: 25px;
+		filter: blur(8px);
+		-webkit-filter: blur(8px);
+	}
+	.inner-lens{
+		width: 130px;
+		height: 130px;
+		border-radius: 50%;
+		position: absolute;
+		background: -webkit-radial-gradient(#0C1B17, #222B27, #5B9297);
+		background: radial-gradient(#071A15, #1B3026, #5B9297);
+		margin: 35px;
+		z-index: 999;
+		box-shadow: 0px 4px 4px rgba(126, 140, 155, 0.88) inset;
+		perspective: 47px;
+	}
+	.inner-lens:before{
+		content: "";
+		width: 15px;
+		height: 56px;
+		background: linear-gradient(to left, rgba(255, 255, 255, 0.4), rgba(255,255,255, 0.25), rgba(255, 255, 255, 0.0));
+		background: -webkit-linear-gradient(to left, rgba(255, 255, 255, 0.4), rgba(255,255,255, 0.25), rgba(255, 255, 255, 0.0));
+		position: absolute;
+		border-radius: 62%;
+		top: -13px;
+		left: 57px;
+		z-index: 999999;
+		filter: blur(6px);
+		-webkit-filter: blur(6px);
+	}
+	.inner-lens:after{
+		content: "";
+		position: absolute;
+		border-radius: 50%;
+		width: 175px;
+		height: 175px;
+		box-shadow: 0px 2px 6px #877f79 inset;
+		background: linear-gradient(left, rgba(8, 9, 13, 0.7), rgba(8, 9, 13, 0.29) ,transparent);
+		background: -webkit-linear-gradient(left, rgba(8, 9, 13, 0.7), rgba(8, 9, 13, 0.29) ,transparent);
+		opacity: 0.85;
+		z-index: 9999;
+		margin-left: -22px;
+		margin-top: -22px;
+	}
+	.shutter{
+		width: 90px;
+		height: 90px;
+		border-radius: 50%;
+		position: absolute;
+		background: radial-gradient(#4C2555, #322841, #191A25, #21252b, #14181c);
+		background: -webkit-radial-gradient(#4C2555, #322841, #191A25, #21252b, #14181c);
+		margin: 20px;
+		z-index: 99999;
+		box-shadow: 0px 5px 9px rgba(67, 98, 112, 0.6) inset;
+		border: 4px solid rgba(18, 24, 24, 0.75);
+	}
+	.reflections{
+		position: absolute;
+		width: 120px;
+		height: 120px;
+		background: transparent;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-left: -12px;
+		margin-top: 18px;
+		transform-origin: bottom center;
+		transform: rotatey(-20deg) rotatez(-1deg);
+		z-index: 999999;
+		filter: blur(0.75px);
+		-webkit-filter: blur(0.75px);
+	}
+	.reflection{
+		background: linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,0.65));
+		background: -webkit-linear-gradient(rgba(255,255,255,.35), rgba(255,255,255,0.65));
+		right: 0px;
+		height: 39px;
+		position: relative;
+		width: 8px;
+		top: 4px;
+		float: right;
+		transform-origin: center center;
+		transform: rotate(-126deg) skew(1deg);
+	}
+	.reflection2{
+		height: 31px;
+		position: relative;
+		width: 14px;
+		float: right;
+		top: 0px;
+		transform-origin: center center;
+		transform: rotate(51deg);
+		perspective: 350px;
+		background: linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.35));
+		background: -webkit-linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.35));
+		right: 0px;
+	}
+	.lens-glow{
+		width: 138px;
+		height: 117px;
+		border-radius: 41%;
+		background: radial-gradient(rgba(255, 255, 255, 0.85), #67918E , #349481);
+		background: -webkit-radial-gradient(rgba(255, 255, 255, 0.85), #67918E , #349481);
+		filter: blur(10px);
+		-webkit-filter: blur(10px);
+		box-shadow: 6px -11px 10px #17243D inset;
+		position: absolute;
+		margin: 35px;
+		margin-left: 36px;
+		margin-top: 49px;
+	}
+	.blue-highlight-bottom{
+		position: absolute;
+		z-index: 99;
+		background: -webkit-radial-gradient(bottom center, #9CC5D3, #015DCC, #002466);
+		width: 101px;
+		height: 105px;
+		border-radius: 50%;
+		margin-left: 49px;
+		margin-top: 70px;
+		-webkit-filter: blur(8px);
+	}
+	.glare{
+		width: 153px;
+		height: 52px;
+		border-radius: 100%;
+		background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+		position: absolute;
+		z-index: 99999;
+		left: -33px;
+	}
+	.glare:before {
+		content: "";
+		width: 5px;
+		height: 4px;
+		border-radius: 50%;
+		background: -webkit-radial-gradient(rgba(216, 192, 230, 1), rgba(216, 192, 230, 0));
+		background: radial-gradient(rgba(216, 192, 230, 1), rgba(216, 192, 230, 0));
+		position: absolute;
+		margin-top: 45px;
+		margin-left: 74px;
+		-webkit-filter: blur(1.5px);
+	}
+	.glare:after {
+		content: "";
+		border-radius: 50%;
+		background: -webkit-radial-gradient(rgba(216, 192, 230, 1), rgba(216, 192, 230, 0.5));
+		background: radial-gradient(rgba(216, 192, 230, 1), rgba(216, 192, 230, 0.5));
+		position: absolute;
+		margin-top: 34px;
+		margin-left: 68px;
+		width: 0px;
+		height: 0px;
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		-webkit-filter: blur(1.5px);
+		border-top: 8px solid rgba(193, 156, 214, 0.5);
+	}
+	.long-shadow{
+		top: 79px;
+		left: 27px;
+		border-radius: 50%;
+		background: radial-gradient(rgba(128, 92, 78, 1), rgba(128, 92, 78, 0.5));
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		border-left: 73px solid transparent;
+		border-right: 71px solid transparent;
+		-webkit-filter: blur(15px);
+		border-top: 71px solid rgba(128, 92, 78, 0);
+		border-bottom: 89px solid rgba(75, 52, 43, 0.65);
+		z-index: -1;
+	}
+	.stripes{
+		display: inline-block;
+		list-style: none;
+		-webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+		-webkit-padding-start: 0px;
+		margin-left: 28px;
+		width: 85px;
+		height: 130px;
+		float: left;
+	}
+	.stripes:before{
+		content:"Insta";
+		font-family: "Bevan";
+		text-shadow: 2px 3px 2px #3F3530;
+		text-align: center;
+		color: #f0eded;
+		position: absolute;
+		width: 90px;
+		box-shadow: 0px -3px 5px rgba(43, 37, 37, 0.86) inset;
+		background: linear-gradient(rgba(43, 37, 37, 0.61), rgba(45, 37, 37, 0.0));
+		margin-left: -3px;
+		margin-top: 112px;
+		line-height: 35px;
+		font-size: 1.45em;
+		letter-spacing: 0.5px;
+		height:35px;
+		border-radius: 30px;
+		z-index: 99999;
+	}
+	.stripes:after{
+		content: "";
+		position: absolute;
+		width: 90px;
+		background: -webkit-linear-gradient(-45deg, rgba(27, 23, 23, 1) 0%, rgba(103,85,74,1) 19%, rgba(153, 131, 104, 1) 50%, rgba(88, 77, 69, 1) 80%, rgba(73,57,56,1) 100%);
+		background: linear-gradient(-45deg, rgba(27, 23, 23, 1) 0%, rgba(103,85,74,1) 19%, rgba(153, 131, 104, 1) 50%, rgba(88, 77, 69, 1) 80%, rgba(73,57,56,1) 100%);
+		box-shadow: 0px -3px 6px rgba(37, 33, 31, 0.47);
+		margin-left: -3px;
+		margin-top: 112px;
+		height:35px;
+		border-radius: 30px;
+		z-index: 8;
+		display: inherit;
+	}
+	.stripe{
+		float: left;
+		display: inline-block;
+		width: 21.25px;
+		height: 130px;
+		background-blend-mode: multiply;
+		background-image: url(http://www.caseycallis.com/images/leather.png);
+	}
+	.red{
+		background-color: #f93552;
+		background-position-x: 50%;
+		box-shadow: 0px 12px 25px #893e4c inset;
+	}
+	.yellow{
+		background-color: #fbca3d;
+		background-position-y: 50%;
+		box-shadow: 0px 12px 25px #ac782b inset;
+	}
+	.green{
+		background-color: #6cca94;
+		background-position-x: 25%;
+		box-shadow: 0px 12px 25px #4b7453 inset;
+	}
+	.blue{
+		background-color: #418efc;
+		background-position-y: 25%;
+		box-shadow: 0px 12px 25px #2c5bd5 inset;
+	}
+	.view-finder{
+		margin-left: 4px;
+		margin-top: 3px;
+		width: 60px;
+		height: 60px;
+		border-radius: 15px;
+		background: radial-gradient(#369E98, #324B40, #0A0A0A);
+		background: -webkit-radial-gradient(#369E98, #324B40, #0A0A0A);
+		box-shadow: 15px 10px 25px rgba(10, 11, 16, 0.83) inset;
+	}
+	.view-finder:after{
+		content: "";
+		position: absolute;
+		width: 40px;
+		height: 30px;
+		-webkit-filter: blur(5px);
+		margin-top: 20px;
+		margin-left: 13px;
+		border-radius: 50%;
+		background: linear-gradient(rgba(98, 207, 178, 1), rgba(84, 161, 180, 0.92), rgba(58, 128, 96, 1));
+	}
+	.view-finder-inset{
+		float: right;
+		margin-right: 28px;
+		margin-top: 28px;
+		width: 68px;
+		height: 69px;
+		border-radius: 15px;
+		background: -webkit-linear-gradient(rgba(76, 49, 40, 0.7), rgba(84, 53, 38, 0.7), rgba(106, 67, 56, 0.7), rgba(141, 86, 40, 0.7), rgba(167, 110, 96, 0.69)), url(leather-brown.png);
+		background: linear-gradient(rgba(76, 49, 40, 0.7), rgba(84, 53, 38, 0.7), rgba(106, 67, 56, 0.7), rgba(141, 86, 40, 0.7), rgba(167, 110, 96, 0.69)), url(leather-brown.png);
+	}
+	.view-finder-lens{
+		width: 41px;
+		height: 41px;
+		border-radius: 50%;
+		background: -webkit-radial-gradient(#140D16, #262131, #252547);
+		border: 4px solid #0d1a28;
+		position: absolute;
+		margin-top: 10px;
+		margin-left: 10px;
+		z-index: 99999;
+		box-shadow: -3px -3px 4px #343769 inset;
+	}
+	.view-finder-lens:before{
+		width: 2px;
+		height: 2px;
+		border-radius: 50%;
+		content: "";
+		background: rgba(255, 202, 255, 1);
+		position: absolute;
+		top: 18px;
+		left: 16px;
+		-webkit-filter: blur(1px);
+		box-shadow: 4px 4px 4px #1F1B1D;
+	}
+	.view-finder-lens:after{
+		content: "";
+		border-radius: 50%;
+		background: radial-gradient(rgba(240, 215, 255, 1), rgba(239, 211, 255, 0.5));
+		position: absolute;
+		margin-top: 10px;
+		margin-left: 13px;
+		width: 0px;
+		height: 0px;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		-webkit-filter: blur(1.5px);
+		border-top: 4px solid rgba(193, 156, 214, 0.5);
+		box-shadow: 4px 4px 4px #1F1B1D;
+	}
+	.view-finder-glare{
+		width: 59px;
+		height: 21px;
+		border-radius: 100%;
+		background: linear-gradient(to bottom right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+		position: absolute;
+		z-index: 9999999;
+		margin-top: 16px;
+		box-shadow: 0px 3px 5px rgba(27, 28, 31, 0.4);
+	}
+	.view-finder-glare:before{
+		content: "";
+		width: 19px;
+		height: 19px;
+		border-radius: 40%;
+		background: radial-gradient(#85414E, #5D477E, #3d2f51);
+		position: absolute;
+		-webkit-filter: blur(4px);
+		right: 3px;
+		top: 6px;
+		opacity: 0.8;
+	}
+	.view-finder-glare:after{
+		content: "";
+		position: absolute;
+		width: 60px;
+		height: 60px;
+		border-radius: 15px;
+		box-shadow: 15px 10px 25px rgba(10, 11, 16, 0.47) inset;
+		top: -16px;
+	}
+	.view-finder-reflections{
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		background: transparent;
+		border-radius: 50%;
+		overflow: hidden;
+		transform-origin: bottom center;
+		transform: rotatey(-20deg) rotatez(-1deg);
+		z-index: 999999;
+		-webkit-filter: blur(0.75px);
+		margin-left: 2px;
+		top: -3px;
+	}
+	.view-finder-reflection{
+		background: linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.95));
+		right: 0px;
+		height: 16px;
+		position: relative;
+		width: 6px;
+		top: 2px;
+		float: right;
+		transform-origin: center center;
+		transform: rotate(-126deg) skew(1deg);
+	}
+	.view-finder-reflection2{
+		height: 9px;
+		position: relative;
+		width: 8px;
+		float: right;
+		top: 0px;
+		transform-origin: center center;
+		transform: rotate(51deg);
+		perspective: 350px;
+		background: linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.35));
+		right: 0px;
+	}
+	p{
+		font-size: 12px;
+		color: black;
+		margin-top: 60px;
+		display: block;
+		text-align: center;
+		font-family: 'Bevan';
+	}

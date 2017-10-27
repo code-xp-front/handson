@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>box</title>
+	<style>
+		*{
+			margin: 0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			background-color: #75C15E;
+		}
+
+		#box {
+			width: 40%;
+			height: 50%;
+			background-color: #fff;
+			/*border:1px solid black;*/
+			position: absolute;
+			top: 25%;
+			left: 30%;
+			padding: 5%;
+			box-shadow: 6px 2px 15px #767c74;
+		}
+
+		input, button{
+			width: 80%;
+			margin-left: 10%;
+			height: 50px;
+			margin-bottom: 20px;
+			background-color: #ccc;
+
+			font-family: Times New Roman;
+			outline: none;
+		}
+		
+		input{
+			border-style: none;
+			background-color: #e3e9ed;
+			font-size: 1.2em;
+			
+		}
+		::-webkit-input-placeholder {
+			color: red;
+		}
+		button {
+			background-color: #2bbc35;
+			color: #fff;
+			font-family: "Times New Roman";
+			font-size: 1.3em;	
+			border-style: none;
+		}
+
+	</style>
+</head>
+<body>
+	<section>
+		<article>
+		<div id="box">
+			<form action="#">
+				<input type="text" placeholder="nome">
+				<input type="password" placeholder="senha">
+				<button>Login</button>
+			</form>
+		</div>
+		</article>
+	</section>
+</body>
+</html>
