@@ -1,0 +1,71 @@
+/* 
+    Um sistema de grid é uma solução tabular utilizando css que serve para acomodar os conteúdos dentro de
+    um layout estruturado que se ajusta conforme as diferentes telas.
+
+    É baseado no conceito de linhas e colunas que podem ser envolvidos em 
+    um container.
+
+    Tradicionalmente um sistema de gride comporta 12 colunas, sendo esse o 
+    limite de 100% da tela. Por exemplo: se você dividir sua linha em 
+    duas colunas você terá duas colunas com tamanho de 50%, se dividir em quatro 
+    você terá 4 colunas com tamanho de 25% cada.
+
+    Abaixo segue um hanson para entendimento e, posteriormente, você será 
+    encorajado a alterá-lo para comportar genericamente 12 colunas.
+
+    Na solução abaixo foi utilizado o display inline-block para melhor 
+    controle do alinhamento vertical se comparado com uma solução float. Essa 
+    solução funciona da mesma forma que o float left!!
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding: 15px;
+    max-width: 960px;
+    margin: 0 auto;
+
+    border: 1px solid black;
+}
+
+.row {
+    width: 100%;
+    border: 1px solid red;
+}
+
+.col {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+    margin-right: -4px;
+
+    border: 1px solid purple;
+}
+
+.col-cl-4 { width: 33.33%; }
+.col-cl-8 { width: 66.66%; }
+.col-cl-12 { width: 100%; }
+
+@media screen and (min-width: 768px){
+    .col-tb-4 { width: 33.33%; }
+    .col-tb-8 { width: 66.66%; }
+    .col-tb-12 { width: 100%; }
+}
+
+@media screen and (min-width: 992px){
+    .col-dk-4 { width: 33.33%; }
+    .col-dk-6 { width: 50%; }
+    .col-dk-8 { width: 66.66%; }
+    .col-dk-12 { width: 100%; }
+}
+
+@media screen and (min-width: 992px){
+    .col-lg-4 { width: 33.33%; }
+    .col-lg-8 { width: 66.66%; }
+    .col-lg-12 { width: 100%; }
+}
