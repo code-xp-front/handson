@@ -27,8 +27,6 @@
 .container {
     width: 100%;
     padding: 15px;
-    /* centraliza o container - ver media 992px */
-    margin: 0 auto;
 }
 
 .row {
@@ -77,8 +75,9 @@
 @media screen and (min-width: 992px) {
     /* limite do container */
     .container {
-        max-width: 1180px;
+        max-width: 1000px;
         padding: 0;
+        margin: 0 auto; /* centraliza o container */
     }
     
     .col-3 {
