@@ -33,19 +33,6 @@
     width: 100%;
 }
 
-/* 
-    para evitar que conteúdos ultrapassem o tamanho da 
-    linha, ou seja, o linhas e conteúdos sem sobreposições
-*/
-.row::before, .row::after {
-    content: '';
-    display: table;
-}
-
-.row::after {
-    clear: both;
-}
-
 .col {
     width: 100%;
     /* melhor que o float pra controlar alinhamento vertical */
