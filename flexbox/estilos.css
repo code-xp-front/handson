@@ -1,0 +1,66 @@
+/*
+Flexbox trabalha com a disposição dos elementos de forma flexível 
+para adapta-los em diferentes dispositivos. 
+
+É uma técnica que facilita o 
+desenvolvimento de layouts simples sem a complexidade das técnicas que utilizam float.
+
+Principais propriedades:
+	display : Flex (controla a flexibilidade do layout)
+	
+PROPRIEDADES PARA O CONTEÚDO/PAI em relação aos seus filhos
+
+	flex-direction: row, column, row-reverse, column-reverse
+
+	flex-wrap: wrap, wrap-reverse, no-wrap (controla a quebra do elemento)
+
+	justify-content: flex-start, flex-end, space-between, space-around
+	
+	align-items: flex-start, flex-end, center, stretch, baseline (alinhamento vertical do elemento filho)
+
+	flex-flow (short line para flex-wrap e flax-direction)
+	
+	align-content: (flex-wrap)
+
+PROPRIEDADES PARA O ITEMS/FILHO
+
+	order: identifica a ordem dos itens sem mexer no html :)
+
+	flex-grow: default é 0 (espaço que falta pra ser ocupado no pai)
+
+	flex-shrink: default é  1 (encolhe a div)
+
+	flex-basis: default é auto (define uma largura de cada elemento caso não especificado)
+
+	https://github.com/jonathantneal/flexibility
+*/
+
+section {
+	width: 700px;
+	height: 500px;
+	background-color: #ccc;
+	display: flex;
+}
+
+article {
+	width: 120px;
+	height: 120px;
+
+	background-color: #DB8E84;
+	border: 1px solid black;
+	
+	
+}
+
+
+article:nth-child(1) {
+	order: 2;
+}
+article:nth-child(2) {
+
+	order: 3;
+}
+article:nth-child(3) {
+	order: 1;
+}
+
