@@ -8,22 +8,50 @@
     <title>Grid com inline-block</title>
 </head>
 <body>
-    <div class="container">
+    <!-- o que acontece se tirar o container? 
+    <div class="container">-->
         
         <div class="row">
-            <div class="col">coluna</div>
+            <div class="col">
+                <div class="para-teste">coluna 100%</div>
+            </div>
         </div>
 
         <div class="row">
-            <div class="col col-2">coluna</div>
-            <div class="col col-2">coluna</div>
+            <div class="col col-2">
+                <div class="para-teste">coluna 50%</div>
+            </div>
+            <div class="col col-2">
+                <div class="para-teste">coluna 50%</div>
+            </div>
         </div>
         
 
         <div class="row">
-            <div class="col col-3">coluna</div>
+            <div class="col col-3">
+                <div class="para-teste">coluna 33.33%</div>
+            </div>
+            <div class="col col-3">
+                <div class="para-teste">coluna 33.33%</div>
+            </div>
+            <div class="col col-3">
+                <div class="para-teste">coluna 33.33%</div>
+            </div>
         </div>
-    </div>
+
+        <div class="row">
+            <div class="col col-3">
+                <div class="para-teste">coluna 33.33% só :(</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-3">
+                <!-- sem conteúdo -->
+            </div>
+        </div>
+
+    <!--</div>  fim do container -->
     
 </body>
 </html>
