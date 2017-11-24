@@ -1,0 +1,101 @@
+/* 
+    Um sistema de grid é uma solução tabular utilizando css que serve para acomodar os conteúdos dentro de
+    um layout estruturado que se ajusta conforme as diferentes telas.
+
+    É baseado no conceito de linhas e colunas que podem ser envolvidos em 
+    um container.
+
+    Tradicionalmente um sistema de gride comporta 12 colunas, sendo esse o 
+    limite de 100% da tela. Por exemplo: se você dividir sua linha em 
+    duas colunas você terá duas colunas com tamanho de 50%, se dividir em quatro 
+    você terá 4 colunas com tamanho de 25% cada.
+
+    Abaixo segue um hanson para entendimento e, posteriormente, você será 
+    encorajado a alterá-lo para comportar genericamente 12 colunas.
+
+    Na solução abaixo foi utilizado o display inline-bloque para melhor 
+    controle do alinhamento vertical se comparado com uma solução float. Essa 
+    solução funciona da mesma forma que o float left!!
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding: 15px;
+    /* centraliza o container - ver media 992px */
+    margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+}
+
+/* 
+    para evitar que conteúdos ultrapassem o tamanho da 
+    linha, ou seja, o linhas e conteúdos sem sobreposições
+*/
+.row::before, .row::after {
+    content: '';
+    display: table;
+}
+
+.row::after {
+    clear: both;
+}
+
+.col {
+    width: 100%;
+    /* melhor que o float pra controlar alinhamento vertical */
+    display: inline-block;
+    vertical-align: top;
+    /* retira espaço inserido pelo inline-block */
+    margin-right: -4px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    min-height: 5px;
+
+
+    background-color: rgb(145, 7, 71);
+    color: white;
+    border: 1px solid white;
+}
+
+/* medias */
+@media (min-width: 768px){
+    .col-2 {
+        width: 50%;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    /* limite do container */
+    .container {
+        max-width: 1180px;
+        padding: 0;
+    }
+    
+    .col-3 {
+        width: 33.33%;
+    }
+}
+
+/* 
+    Atividade em Grupo: 
+        Vocês devem se juntar para elaborar uma solução que contemple todas as 12 colunas 
+        para qualquer media trabalhadas durante o curso (mobile, tablet, desktop e telas largas).
+
+        Façam uma reunião entre o grupo para encontrar a melhor solução.
+
+        Depois seu grupo deverá apresentar a solução encontrada a todos os participantes da aula.
+
+        Logo em seguida, vocês serão levados a um projeto prático para a aplicação de seu mini-framework!
+
+        Sucesso!
+*/
