@@ -9,7 +9,6 @@
     limite de 100% da tela. Por exemplo: se você dividir sua linha em 
     duas colunas você terá duas colunas com tamanho de 50%, se dividir em quatro 
     você terá 4 colunas com tamanho de 25% cada.
-
     Abaixo segue um hanson para entendimento e, posteriormente, você será 
     encorajado a alterá-lo para comportar genericamente 12 colunas.
 
@@ -26,46 +25,93 @@
 
 .container {
     width: 100%;
-    padding: 15px;
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
-
-    border: 1px solid black;
+    border: 1px solid rgb(41, 7, 58);
 }
 
 .row {
     width: 100%;
-    border: 1px solid red;
 }
 
-.col {
-    width: 100%;
-    vertical-align: top;
-    display: inline-block;
-    margin-right: -4px;
-
-    border: 1px solid purple;
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.col-cl-4 { width: 33.33%; }
-.col-cl-8 { width: 66.66%; }
-.col-cl-12 { width: 100%; }
+[class*='col-'] {
+    
+    text-align: center;
+    float: left;
+    /* espaçamento entre as colunas, conhecido como GUTTERS */
+    padding: 15px;
+}
 
+.col-cl-1   { width: calc((1 * 100%) / 12) }
+.col-cl-2   { width: calc((2 * 100%) / 12) }
+.col-cl-3   { width: calc((3 * 100%) / 12) }
+.col-cl-4   { width: calc((4 * 100%) / 12) }
+.col-cl-5   { width: calc((5 * 100%) / 12) }
+.col-cl-6   { width: calc((6 * 100%) / 12) }
+.col-cl-7   { width: calc((7 * 100%) / 12) }
+.col-cl-8   { width: calc((8 * 100%) / 12) }
+.col-cl-9   { width: calc((9 * 100%) / 12) }
+.col-cl-1   { width: calc((10 * 100%) / 12) }
+.col-cl-11  { width: calc((11 * 100%) / 12) }
+.col-cl-12  { width: calc((12 * 100%) / 12) }
+
+/* TABLETS */
 @media screen and (min-width: 768px){
-    .col-tb-4 { width: 33.33%; }
-    .col-tb-8 { width: 66.66%; }
-    .col-tb-12 { width: 100%; }
+    .col-tb-1   { width: calc((1 * 100%) / 12) }
+    .col-tb-2   { width: calc((2 * 100%) / 12) }
+    .col-tb-3   { width: calc((3 * 100%) / 12) }
+    .col-tb-4   { width: calc((4 * 100%) / 12) }
+    .col-tb-5   { width: calc((5 * 100%) / 12) }
+    .col-tb-6   { width: calc((6 * 100%) / 12) }
+    .col-tb-7   { width: calc((7 * 100%) / 12) }
+    .col-tb-8   { width: calc((8 * 100%) / 12) }
+    .col-tb-9   { width: calc((9 * 100%) / 12) }
+    .col-tb-1   { width: calc((10 * 100%) / 12) }
+    .col-tb-11  { width: calc((11 * 100%) / 12) }
+    .col-tb-12  { width: calc((12 * 100%) / 12) }
 }
 
+/* DESKTOP */
 @media screen and (min-width: 992px){
-    .col-dk-4 { width: 33.33%; }
-    .col-dk-6 { width: 50%; }
-    .col-dk-8 { width: 66.66%; }
-    .col-dk-12 { width: 100%; }
+    .col-dk-1   { width: calc((1 * 100%) / 12) }
+    .col-dk-2   { width: calc((2 * 100%) / 12) }
+    .col-dk-3   { width: calc((3 * 100%) / 12) }
+    .col-dk-4   { width: calc((4 * 100%) / 12) }
+    .col-dk-5   { width: calc((5 * 100%) / 12) }
+    .col-dk-6   { width: calc((6 * 100%) / 12) }
+    .col-dk-7   { width: calc((7 * 100%) / 12) }
+    .col-dk-8   { width: calc((8 * 100%) / 12) }
+    .col-dk-9   { width: calc((9 * 100%) / 12) }
+    .col-dk-1   { width: calc((10 * 100%) / 12) }
+    .col-dk-11  { width: calc((11 * 100%) / 12) }
+    .col-dk-12  { width: calc((12 * 100%) / 12) }
 }
 
-@media screen and (min-width: 992px){
-    .col-lg-4 { width: 33.33%; }
-    .col-lg-8 { width: 66.66%; }
-    .col-lg-12 { width: 100%; }
+/* TELAS LARGAS - ACIMA DE 1200PX */
+@media screen and (min-width: 1200px){
+    .col-lg-1   { width: calc((1 * 100%) / 12) }
+    .col-lg-2   { width: calc((2 * 100%) / 12) }
+    .col-lg-3   { width: calc((3 * 100%) / 12) }
+    .col-lg-4   { width: calc((4 * 100%) / 12) }
+    .col-lg-5   { width: calc((5 * 100%) / 12) }
+    .col-lg-6   { width: calc((6 * 100%) / 12) }
+    .col-lg-7   { width: calc((7 * 100%) / 12) }
+    .col-lg-8   { width: calc((8 * 100%) / 12) }
+    .col-lg-9   { width: calc((9 * 100%) / 12) }
+    .col-lg-1   { width: calc((10 * 100%) / 12) }
+    .col-lg-11  { width: calc((11 * 100%) / 12) }
+    .col-lg-12  { width: calc((12 * 100%) / 12) }
+}
+
+.fundo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 15px 0;
+    background: purple;
 }
