@@ -9,18 +9,125 @@
 <body>
     <h1>Lógica com JavaScript</h1>
     <script>
-        // entrada
-        var nome = prompt("Digite seu nome");
-        var peso = parseFloat( prompt("Digite seu peso em kg") );
-        var altura = prompt("Digite sua altura");
-        var imc;
-        // processamento
-        altura = parseFloat(altura);
-        imc = peso / (altura * altura);
-        // saida
+        // // entrada
+        // var nome = prompt("Digite seu nome");
+        // var peso = parseFloat( prompt("Digite seu peso em kg") );
+        // var altura = prompt("Digite sua altura");
+        // var imc;
+        // // processamento
+        // altura = parseFloat(altura);
+        // imc = peso / (altura * altura);
+        // // saida
 
-        console.log(imc.toFixed(2));
+        // console.log(imc.toFixed(2));
         
+
+        // var cod = prompt("digite o código do produto");
+
+        // if( cod == 1 ) {
+        //     alert('Produto do Sul');
+        // } else if( cod == 2 ) {
+        //     alert('Produto do Sul');
+        // } else if ( cod == 3 ) {
+        //     alert('Produto do Leste');
+        // } else if ( cod == 4 ) {
+        //     alert('Produto do Oeste');
+        // } else if ( cod == 5 || cod == 6 ) {
+        //     alert('Produto do Nordeste');
+        // } else if ( cod >= 7 && cod <= 9 ) {
+        //     alert('Produto do Sudeste');
+        // }
+        
+
+
+
+
+
+        /*
+        Elabore um programa que solicite um número 
+        entre 1 e 12. Você deve validar com if simples.
+        Exiba o mês correspondente por extenso, utilizando 
+        a estrutura if composto
+        */
+
+        var mes = parseInt( prompt("digite um número entre 1 e 3") );
+        
+            switch (mes) {//1i
+                case 1:
+                    alert("Janeiro");
+                    break;
+                case 2:
+                    alert("Fevereiro");
+                    break;
+                case 3:
+                    alert("Março");
+                    break;
+                default:
+                    alert("digite apenas números de 1 a 3");
+                    break;
+            }
+        
+        
+
+
+
+
+
+
+
+        // if( mes >=1 && mes <= 12 ) {
+            
+        //     //validar os meses
+        //     if ( mes == 1 ){
+        //         alert("Janeiro");
+        //     } else if ( mes == 2 ){
+        //         alert("Fevereiro");
+        //     }  else if ( mes == 3 ){
+        //         alert("Março");
+        //     }  else if ( mes == 4 ){
+        //         alert("Abril");
+        //     }  else if ( mes == 5 ){
+        //         alert("Maio");
+        //     }  else if ( mes == 6 ){
+        //         alert("Junho");
+        //     }  else if ( mes == 7 ){
+        //         alert("Julho");
+        //     }  else if ( mes == 8 ){
+        //         alert("Agosto");
+        //     }  else if ( mes == 9 ){
+        //         alert("Setembro");
+        //     }  else if ( mes == 10 ){
+        //         alert("Outubro");
+        //     }  else if ( mes == 11 ){
+        //         alert("Novembro");
+        //     } else {
+        //         alert("Dezembro");
+        //     }
+
+        // } else {
+        //     alert("digite apenas números de 1 a 12");
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
     </script>
 </body>
 </html>
