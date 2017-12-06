@@ -185,54 +185,54 @@
 // }
 
 
-function somar(a, b){
-    return a + b;
-}
+// function somar(a, b){
+//     return a + b;
+// }
 
-function subtrair(a, b){
-    var resultado = a - b;
-    return resultado;
-}
+// function subtrair(a, b){
+//     var resultado = a - b;
+//     return resultado;
+// }
 
-function multiplicar(a, b){
-    return a * b;
-}
+// function multiplicar(a, b){
+//     return a * b;
+// }
 
-function dividir(a, b){
-    if( b == 0 ) {
-        return 'erro de divisão por zero!';
-    } else {
-        return a / b;
-    }
-}
+// function dividir(a, b){
+//     if( b == 0 ) {
+//         return 'erro de divisão por zero!';
+//     } else {
+//         return a / b;
+//     }
+// }
 
 
-var x        = prompt("Digite o primeiro número");
-var y        = prompt("Digite o segundo número");
+// var x        = prompt("Digite o primeiro número");
+// var y        = prompt("Digite o segundo número");
 
-var txtOperacao     = "Escolha a operação: ";
-    txtOperacao     = txtOperacao + "\nAdição: 1";
-    txtOperacao    +="\nSubtração: 2";
-    txtOperacao    +="\nMultiplicação: 3";
-    txtOperacao    +="\ndivisão: 4";
+// var txtOperacao     = "Escolha a operação: ";
+//     txtOperacao     = txtOperacao + "\nAdição: 1";
+//     txtOperacao    +="\nSubtração: 2";
+//     txtOperacao    +="\nMultiplicação: 3";
+//     txtOperacao    +="\ndivisão: 4";
 
-var operacao = parseInt( prompt(txtOperacao) );
-    switch (operacao) {
-        case 1:
-            document.write("O resultado da adição é : " + somar(x, y));
-            break;
-        case 2:
-            document.write("O resultado da subtração é: " + somar(x, y));
-            break;
-        case 3:
-            document.write("O resultado da multiplicação é: " + multiplicar(x, y));
-            break;
-        case 4:
-            document.write("O resultado da divisão é: " + dividir(x, y));
-            break;
-        default:
-            break;
-    }
+// var operacao = parseInt( prompt(txtOperacao) );
+//     switch (operacao) {
+//         case 1:
+//             document.write("O resultado da adição é : " + somar(x, y));
+//             break;
+//         case 2:
+//             document.write("O resultado da subtração é: " + somar(x, y));
+//             break;
+//         case 3:
+//             document.write("O resultado da multiplicação é: " + multiplicar(x, y));
+//             break;
+//         case 4:
+//             document.write("O resultado da divisão é: " + dividir(x, y));
+//             break;
+//         default:
+//             break;
+//     }
 
 
 
@@ -254,6 +254,40 @@ var operacao = parseInt( prompt(txtOperacao) );
 
 
 
+
+// var carro = {
+//     cor : "branca",
+//     qtdPortas : 4,
+//     marca : "Fiat",
+//     andar  : function(){
+//         alert("Vrummm");
+//     }
+// };
+// console.log(carro.cor);   
+// console.log(carro.marca);
+// carro.andar();
+
+var objOperacoes = {
+    resultado : null,
+    valor1 : null,
+    valor2 : null,
+    
+    somar : function(){
+        this.resultado = this.valor1 + this.valor2;
+        return  this.resultado;
+    },
+
+    iniciarValores : function(a, b){
+        this.valor1 = a;
+        this.valor2 = b;
+    }
+}
+
+var x = 20;
+var y = 30;
+
+objOperacoes.iniciarValores(x, y);
+console.log( objOperacoes.somar() );
 
     </script>
 </body>
