@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lógica com JavaScript</h1>
+    <script>
+        // // entrada
+        // var nome = prompt("Digite seu nome");
+        // var peso = parseFloat( prompt("Digite seu peso em kg") );
+        // var altura = prompt("Digite sua altura");
+        // var imc;
+        // // processamento
+        // altura = parseFloat(altura);
+        // imc = peso / (altura * altura);
+        // // saida
+
+        // console.log(imc.toFixed(2));
+        
+
+        // var cod = prompt("digite o código do produto");
+
+        // if( cod == 1 ) {
+        //     alert('Produto do Sul');
+        // } else if( cod == 2 ) {
+        //     alert('Produto do Sul');
+        // } else if ( cod == 3 ) {
+        //     alert('Produto do Leste');
+        // } else if ( cod == 4 ) {
+        //     alert('Produto do Oeste');
+        // } else if ( cod == 5 || cod == 6 ) {
+        //     alert('Produto do Nordeste');
+        // } else if ( cod >= 7 && cod <= 9 ) {
+        //     alert('Produto do Sudeste');
+        // }
+        
+
+
+
+
+
+        /*
+        Elabore um programa que solicite um número 
+        entre 1 e 12. Você deve validar com if simples.
+        Exiba o mês correspondente por extenso, utilizando 
+        a estrutura if composto
+        */
+
+        // var mes = parseInt( prompt("digite um número entre 1 e 3") );
+        
+        //     switch (mes) {//1i
+        //         case 1:
+        //             alert("Janeiro");
+        //             break;
+        //         case 2:
+        //             alert("Fevereiro");
+        //             break;
+        //         case 3:
+        //             alert("Março");
+        //             break;
+        //         default:
+        //             alert("digite apenas números de 1 a 3");
+        //             break;
+        //     }
+        
+        
+
+
+
+
+
+
+
+        // if( mes >=1 && mes <= 12 ) {
+            
+        //     //validar os meses
+        //     if ( mes == 1 ){
+        //         alert("Janeiro");
+        //     } else if ( mes == 2 ){
+        //         alert("Fevereiro");
+        //     }  else if ( mes == 3 ){
+        //         alert("Março");
+        //     }  else if ( mes == 4 ){
+        //         alert("Abril");
+        //     }  else if ( mes == 5 ){
+        //         alert("Maio");
+        //     }  else if ( mes == 6 ){
+        //         alert("Junho");
+        //     }  else if ( mes == 7 ){
+        //         alert("Julho");
+        //     }  else if ( mes == 8 ){
+        //         alert("Agosto");
+        //     }  else if ( mes == 9 ){
+        //         alert("Setembro");
+        //     }  else if ( mes == 10 ){
+        //         alert("Outubro");
+        //     }  else if ( mes == 11 ){
+        //         alert("Novembro");
+        //     } else {
+        //         alert("Dezembro");
+        //     }
+
+        // } else {
+        //     alert("digite apenas números de 1 a 12");
+        // }
+
+
+
+
+// var numero = 1;
+
+// while ( numero % 2 == 1 ) {
+//     numero = parseInt( prompt("digite um número par") );
+
+//     if ( numero % 2 == 0 ) {
+//         alert("Número par: " + numero);
+//     }
+// }
+
+// alert("fim do programa");
+
+
+
+
+
+// Faça um número que imprima os números ímpares de 0 a 50
+
+// var numero = 0;
+// while ( numero <= 50) {
+    
+//     if( numero % 2 == 1 ){
+//         document.write(numero + "<br>");
+//     }
+
+//     numero++;
+// }
+
+// var tabuada = prompt("Qual tabuada você quer saber?")
+// var cont = 1;
+// var texto = "";
+// while ( cont <= 10 ) {
+//     // 5 x 1 = 5
+//     texto = tabuada + " x " +cont+  " = " + (tabuada * cont)+" <br>";
+//     document.write(texto);
+//     cont++;
+// }
+
+// var tabuada = prompt("Qual tabuada você quer saber?")
+// var texto = "";
+
+// for(var cont = 1; cont <= 10; cont++){
+//     texto = tabuada + " x " +cont+  " = " + (tabuada * cont)+" <br>";
+//     document.write(texto);
+// }
+
+// var soma = 0;
+// for ( var i = 1; i <= 3; i++ ) {
+//     soma += parseFloat( prompt("Digite o "+i+"o número") );
+// }
+//     alert("A soma de todos os números é : "+soma);
+
+// var numero = 0;
+// var soma = 0;
+
+// for ( var i = 1; i <= 3; i++ ) {
+
+//     numero = parseFloat( prompt("Digite o "+i+"o número") );
+//     soma += numero;
+// }
+
+// document.write("Somatório: " + soma);
+
+
+// Faça um programa que imprima na tela a tabuada de 1 a 10.
+
+// for(var tabuada = 1; tabuada <= 10; tabuada++){
+//     document.write("Tabuada do "+ tabuada + "<br>");
+//     for(var y = 1; y <= 10; y++){
+//         document.write( tabuada + " x " +y+ " = "+(tabuada * y)+" <br>" );
+//     }
+// }
+
+
+function somar(a, b){
+    return a + b;
+}
+
+function subtrair(a, b){
+    var resultado = a - b;
+    return resultado;
+}
+
+function multiplicar(a, b){
+    return a * b;
+}
+
+function dividir(a, b){
+    if( b == 0 ) {
+        return 'erro de divisão por zero!';
+    } else {
+        return a / b;
+    }
+}
+
+
+var x        = prompt("Digite o primeiro número");
+var y        = prompt("Digite o segundo número");
+
+var txtOperacao     = "Escolha a operação: ";
+    txtOperacao     = txtOperacao + "\nAdição: 1";
+    txtOperacao    +="\nSubtração: 2";
+    txtOperacao    +="\nMultiplicação: 3";
+    txtOperacao    +="\ndivisão: 4";
+
+var operacao = parseInt( prompt(txtOperacao) );
+    switch (operacao) {
+        case 1:
+            document.write("O resultado da adição é : " + somar(x, y));
+            break;
+        case 2:
+            document.write("O resultado da subtração é: " + somar(x, y));
+            break;
+        case 3:
+            document.write("O resultado da multiplicação é: " + multiplicar(x, y));
+            break;
+        case 4:
+            document.write("O resultado da divisão é: " + dividir(x, y));
+            break;
+        default:
+            break;
+    }
+
+
+
+
+
+// var o = prompt("digite a operação: soma, subtracao, divisao, multiplicacao");
+
+// if(o == 'soma'){
+//     document.write( soma(x, y) );
+// } else if (o == 'subtracao'){
+//     document.write( subtrair(x, y) );
+// } else if (o == 'divisao'){
+//     document.write( dividir(x, y) );
+// } else if (o == 'multiplicacao'){
+//     document.write( multiplicar(x, y) );
+// } else {
+//     document.write( "Operação inválida" );
+// }
+
+
+
+
+    </script>
+</body>
+</html>
